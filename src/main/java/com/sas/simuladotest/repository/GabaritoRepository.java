@@ -14,7 +14,7 @@ public interface GabaritoRepository extends JpaRepository<Gabarito, Long> {
 	public List<Gabarito> buscarGabaritoPeloIdDoSimulado(@PathVariable("idSimulado") Long idSimulado);
 	
 	@Query("select g from Gabarito g where g.questao.prova.id = :idProva")
-	public List<Gabarito> buscarGabaritoPeloIdDaProva(@PathVariable("idSimulado") Long idProva);
+	public List<Gabarito> buscarGabaritoPeloIdDaProva(@PathVariable("idProva") Long idProva);
 
 
 }
